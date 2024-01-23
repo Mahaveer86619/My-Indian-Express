@@ -63,3 +63,14 @@ fun PreviewNewsButton() {
     }
     
 }
+@Preview
+@Composable
+fun PreviewNewsTextButton() {
+
+    MyIndianExpressTheme {
+        NewsTextButton(text = "Next") {
+
+        }
+    }
+
+}

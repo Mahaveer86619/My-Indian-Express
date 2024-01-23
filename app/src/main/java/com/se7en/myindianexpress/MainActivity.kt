@@ -3,7 +3,11 @@ package com.se7en.myindianexpress
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import com.se7en.myindianexpress.navigation.SetupNavGraph
@@ -24,13 +28,18 @@ class MainActivity : ComponentActivity() {
             !splashViewModel.isLoading.value
         }
         setContent {
-            MyIndianExpressTheme {
-                val screen by splashViewModel.startDestination
-                val navController = rememberNavController()
-                SetupNavGraph(
-                    navController = navController,
-                    startDestination = screen
-                )
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colorScheme.surface
+            ) {
+                MyIndianExpressTheme {
+                    val screen by splashViewModel.startDestination
+                    val navController = rememberNavController()
+                    SetupNavGraph(
+                        navController = navController,
+                        startDestination = screen
+                    )
+                }
             }
         }
     }

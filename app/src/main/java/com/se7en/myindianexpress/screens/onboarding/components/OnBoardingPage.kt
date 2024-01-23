@@ -17,8 +17,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.se7en.myindianexpress.screens.onboarding.MyDimentions.MediumPadding1
-import com.se7en.myindianexpress.screens.onboarding.MyDimentions.MediumPadding2
+import com.se7en.myindianexpress.screens.MyDimensions.MediumPadding1
+import com.se7en.myindianexpress.screens.MyDimensions.MediumPadding2
 import com.se7en.myindianexpress.screens.onboarding.Page
 import com.se7en.myindianexpress.screens.onboarding.pages
 import com.se7en.myindianexpress.ui.theme.MyIndianExpressTheme
@@ -42,7 +42,10 @@ fun OnBoardingPage(
             contentScale = ContentScale.Fit
         )
 
-        Spacer(modifier = Modifier.height(MediumPadding1))
+        Spacer(
+            modifier = Modifier
+                .height(MediumPadding1)
+        )
 
         Text(
             text = page.title,

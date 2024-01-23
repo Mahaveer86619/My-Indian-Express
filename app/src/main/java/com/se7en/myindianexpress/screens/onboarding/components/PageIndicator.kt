@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import com.se7en.myindianexpress.screens.onboarding.MyDimentions.IndicatorSize
+import com.se7en.myindianexpress.screens.MyDimensions.IndicatorSize
 import com.se7en.myindianexpress.ui.theme.BlueGray
 
 @Composable
